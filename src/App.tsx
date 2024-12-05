@@ -4,7 +4,7 @@ import {
   Routes,
   Navigate,
 } from 'react-router-dom'
-import { Home, Login, Registration, Leads, Profile } from './pages'
+import { Home, Login, Registration, Leads, Profile } from '@/pages'
 function App() {
   return (
     <Router>
