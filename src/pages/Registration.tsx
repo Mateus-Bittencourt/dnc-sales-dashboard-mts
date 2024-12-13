@@ -5,6 +5,7 @@ import {
   StyledH1,
   StyledP,
   StyledUl,
+  Logo,
 } from '@/components'
 import { pxToRem } from '@/utils'
 
@@ -20,7 +21,9 @@ function Registration() {
             sx={{ alignItems: 'center', display: 'flex', height: '100vh' }}
           >
             <Container maxWidth="sm">
-              <Box sx={{ marginBottom: pxToRem(24) }}>logo...</Box>
+              <Box sx={{ marginBottom: pxToRem(24) }}>
+                <Logo height={41} width={100} />
+              </Box>
               <Box sx={{ marginBottom: pxToRem(24) }}>
                 <StyledH1>Register now</StyledH1>
                 <StyledP>First, tell us who you are.</StyledP>
