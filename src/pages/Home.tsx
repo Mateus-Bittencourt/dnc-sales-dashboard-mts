@@ -1,4 +1,10 @@
-import { AvatarList, CardComponent, CustomTable, Header } from '@/components'
+import {
+  AvatarList,
+  CardComponent,
+  CustomChart,
+  CustomTable,
+  Header,
+} from '@/components'
 import { Container } from '@mui/material'
 import { currencyConverter } from '@/utils'
 
@@ -42,6 +48,13 @@ function Home() {
           <CustomTable
             headers={mockTableData.headers}
             rows={mockTableData.rows}
+          />
+        </CardComponent>
+        <CardComponent className="">
+          <CustomChart
+            data={[10, 20, 30, 40, 20]}
+            labels={['Jan', 'Feb', 'Mar', 'Apr', 'May']}
+            type="bar"
           />
         </CardComponent>
       </Container>
