@@ -37,7 +37,7 @@ export const usePost = <T, P>(endpoint: string) => {
   return { data, loading, error, postData }
 }
 
-const useGet = (endpoint: string, config?: AxiosRequestConfig) => {
+export const useGet = (endpoint: string, config?: AxiosRequestConfig) => {
   const [data, setData] = useState<any | null>(null)
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState<number | null>(null)
