@@ -37,8 +37,8 @@ export const usePost = <T, P>(endpoint: string) => {
   return { data, loading, error, postData }
 }
 
-export const useGet = (endpoint: string, config?: AxiosRequestConfig) => {
-  const [data, setData] = useState<any | null>(null)
+export const useGet = <T>(endpoint: string, config?: AxiosRequestConfig) => {
+  const [data, setData] = useState<T | null>(null)
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState<number | null>(null)
 
@@ -59,7 +59,7 @@ export const useGet = (endpoint: string, config?: AxiosRequestConfig) => {
       })
       setData(response.data)
     } catch (error: any) {
-      setError(error.response.status ?? 500)
+      setError(error.response?.status ?? 500)
     } finally {
       setLoading(false)
     }
